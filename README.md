@@ -1,5 +1,5 @@
 # LaTeX-InnovationCup
-这是中国人民大学“创新杯”学生学术科技作品竞赛 LaTeX 模板。
+这是中国人民大学“创新杯”学生学术科技作品竞赛 LaTeX 模板。（创新杯翻译是 Innovation cup 吗？）
 
 是我（缝合怪兼 LaTeX 业余爱好者）google bing 写的统计学院模板。
 
