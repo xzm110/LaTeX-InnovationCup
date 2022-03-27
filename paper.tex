@@ -1,0 +1,142 @@
+\documentclass[zihao=5, UTF8]{ctexart}
+\usepackage{extarrows}
+\usepackage{amssymb}
+\usepackage{makecell}
+\usepackage{ctex}
+\usepackage{listings}
+\usepackage{xcolor} 
+\usepackage{graphicx}
+\usepackage{booktabs} %绘制表格
+\usepackage{caption2} %标题居中
+\usepackage{geometry}
+\usepackage{array}
+\usepackage{amsmath}
+\usepackage{subfigure} 
+\usepackage{longtable}
+\usepackage{abstract}
+\usepackage[hidelinks]{hyperref}
+\usepackage{float}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{appendix}
+\usepackage{outline} 
+\usepackage{pmgraph} 
+\usepackage[normalem]{ulem}
+\usepackage{verbatim}
+\usepackage[titles,subfigure]{tocloft}
+
+
+
+% 设置目录的一级标题后面有点点点到页码
+\renewcommand\cftsecdotsep{\cftdotsep}
+\renewcommand\cftsecleader{\cftdotfill{\cftsecdotsep}}
+
+\setcounter{tocdepth}{2} % 设置目录显示的标题级数，只显示到 subsection，再小的标题就不显示了。
+
+% 将默认的标题序号 1 1.1 1.1.1 改为 一 （一）1
+\ctexset{
+	section = {
+	name = { },
+	number = \chinese{section}, 
+	aftername = \hspace{5pt}
+	}, 
+  	subsection = {
+    name    = {（,）},
+    number  = \chinese{subsection},
+	aftername = \hspace{0pt}
+  	},
+  	subsubsection = {
+    name    = {,.},
+    number  = \ttfamily\arabic{subsubsection},
+	aftername = \hspace{0pt}
+  	}
+}
+
+\pagestyle{plain} %页眉消失
+\graphicspath{ {./imgs/} } % 设置图片路径
+\geometry{a4paper,left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm}
+
+
+% 设置第一页的横线
+\makeatletter
+\newcommand\dlmu[2][4cm]{\hskip1pt\underline{\hb@xt@#1{\hss#2\hss}}\hskip3pt}
+\makeatother
+
+
+\title{
+\includegraphics[width=4in]{ruc} \\
+\vspace*{0.1in}
+\Huge{第二十四届“创新杯”  } \\
+\Huge{学生课外学术科技作品竞赛}
+\vspace*{1in}
+}
+\author{
+	\vspace*{0.1in}
+	\Large{\textbf{作品名称：\dlmu[13cm]{这里是标题}}} \\
+	\vspace*{0.1in}
+	\Large{\textbf{竞赛单元：\dlmu[13cm]{常规赛道}}} \\
+	\Large{\textbf{参评单位：\dlmu[13cm]{统计学院}}} \\
+	\vspace*{0.1in}
+}\date{\Large{\textbf{二零二二年三月二十六日}}}
+
+
+
+\setlength{\oddsidemargin}{0in} \setlength{\evensidemargin}{0in}
+\setlength{\topmargin}{0in}     \setlength{\headsep}{-.25in}
+\setlength{\textwidth}{6.5in}   \setlength{\textheight}{8.5in}
+%--------------------Indention
+\setlength{\parindent}{1cm}
+
+
+
+\begin{document}
+\maketitle
+
+\newpage
+\renewcommand{\abstractname}{\Large 摘要\\}
+\begin{abstract}
+	\normalsize
+	这是摘要
+	\newline
+	\newline
+	\textbf{关键词}：key1；key2
+\end{abstract}
+
+\newpage
+\tableofcontents
+
+\newpage
+\section{引言}
+
+\section{文献综述}
+\subsection{文献}
+这里是对文献的总结
+
+可以适当分成若干 subsection
+\subsection{研究问题的形成}
+
+\section{研究思路与设计}
+\subsection{研究假设}
+\subsection{变量说明}
+\subsection{预调研}
+
+\section{数据收集与检验}
+
+\section{数据分析}
+
+\section{结论与建议}
+
+\newpage
+\addcontentsline{toc}{section}{参考文献}
+\begin{thebibliography}{99}
+\bibitem{r1} 文献1 
+\end{thebibliography}
+
+\newpage
+\addcontentsline{toc}{section}{附录}
+	\section*{附录}
+	\subsection*{附录 A}
+
+	\subsection*{附录 B}
+
+\end{document}
